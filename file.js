@@ -40,7 +40,7 @@ const validate = () => {
     const name = document.getElementById('name');
     const phone = document.getElementById('phone');
     const address = document.getElementById('address');
-    const enquire = document.getElementById('enquire');
+    const enquiry = document.getElementById('enquiry');
 }
 
 form.addEventListener('submit', (event) => {
@@ -94,7 +94,7 @@ const isEmail = (emailVal) => {
 const nameVal = name.value.trim();
 const phoneVal = phone.value.trim();
 const addressVal = address.value.trim();
-const enquireVal = enquire.value.trim();
+const enquiryVal = enquiry.value.trim();
 
 // validate username
 if (nameVal === "") {
