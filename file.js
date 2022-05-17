@@ -38,6 +38,7 @@ const validate = () => {
 
     const form = document.getElementById('form');
     const name = document.getElementById('name');
+    const email = document.getElementById('email');
     const phone = document.getElementById('phone');
     const address = document.getElementById('address');
     const enquiry = document.getElementById('enquiry');
@@ -95,6 +96,7 @@ const isEmail = (emailVal) => {
 const phoneVal = phone.value.trim();
 const addressVal = address.value.trim();
 const enquiryVal = enquiry.value.trim();
+const emailVal = email.value.trim();
 
 // validate username
 // if (nameVal === "") {
