@@ -91,7 +91,7 @@ const isEmail = (emailVal) => {
 
 // Defining the validate function
 
-const nameVal = name.value.trim();
+// const nameVal = name.value.trim();
 const phoneVal = phone.value.trim();
 const addressVal = address.value.trim();
 const enquiryVal = enquiry.value.trim();
