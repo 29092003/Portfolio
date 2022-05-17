@@ -97,14 +97,14 @@ const addressVal = address.value.trim();
 const enquiryVal = enquiry.value.trim();
 
 // validate username
-if (nameVal === "") {
-    setErrorMsg(name, 'username cannot be blank');
-} else if (nameVal.length <= 2) {
-    setErrorMsg(name, 'username min 3 char');
-}
-else {
-    setSuccessMsg(name);
-}
+// if (nameVal === "") {
+//     setErrorMsg(name, 'username cannot be blank');
+// } else if (nameVal.length <= 2) {
+//     setErrorMsg(name, 'username min 3 char');
+// }
+// else {
+//     setSuccessMsg(name);
+// }
 
 
 
