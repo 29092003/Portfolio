@@ -37,8 +37,13 @@ document.querySelector('.hamburger').addEventListener("click", () => {
 const validate = () => {
 
     const form = document.getElementById('form');
+<<<<<<< HEAD
     const username = document.getElementById('username');
     const email = document.getElementById('email') 
+=======
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+>>>>>>> 01961b58dc78856b07b6be68af7d30a7264080db
     const phone = document.getElementById('phone');
     const address = document.getElementById('address');
     const enquiry = document.getElementById('enquiry');
@@ -92,11 +97,16 @@ const isEmail = (emailVal) => {
 
 // Defining the validate function
 
+<<<<<<< HEAD
 const usernameVal = username.value.trim();
+=======
+// const nameVal = name.value.trim();
+>>>>>>> 01961b58dc78856b07b6be68af7d30a7264080db
 const phoneVal = phone.value.trim();
 const addressVal = address.value.trim();
 const enquiryVal = enquiry.value.trim();
 const emailVal = email.value.trim();
+<<<<<<< HEAD
 
 
 // validate username
@@ -108,6 +118,10 @@ if (usernameVal === "") {
 else {
     setSuccessMsg(username);
 };
+=======
+
+
+>>>>>>> 01961b58dc78856b07b6be68af7d30a7264080db
 
 
 
