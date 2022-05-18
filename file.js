@@ -34,7 +34,7 @@ document.querySelector('.hamburger').addEventListener("click", () => {
 
 //define validate 
 
-const validate = () => {
+// const validate = () => {
 
     const form = document.getElementById('form');
     const username = document.getElementById('username');
@@ -42,7 +42,7 @@ const validate = () => {
     const phone = document.getElementById('phone');
     const address = document.getElementById('address');
     const enquiry = document.getElementById('enquiry');
-}
+// }
 
 form.addEventListener('submit', (event) => {
     console.log('submit');
@@ -72,9 +72,10 @@ const successMsg = (usernameVal) => {
             console.log(sRate);
             sendData(usernameVal, sRate, count);
         }
+
         else {
             return false;
-        };
+        }
     };
 
 };
@@ -91,7 +92,7 @@ const isEmail = (emailVal) => {
 }
 
 // Defining the validate function
-
+const validate = () =>{
 const usernameVal = username.value.trim();
 const phoneVal = phone.value.trim();
 const addressVal = address.value.trim();
@@ -162,13 +163,13 @@ else {
 }
 
 successMsg(usernameVal);
-
+}
 //for final loop data validation
 
 function setErrorMsg(input, errormsgs) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
-    formControl.className = "form-control error"
+    formControl.className = "form-control error";
     small.innerText = errormsgs;
 };
 
@@ -177,3 +178,4 @@ function setErrorMsg(input) {
     formControl.className = "form-control success";
 
 };
+
