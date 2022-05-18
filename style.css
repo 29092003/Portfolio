@@ -552,7 +552,7 @@
     padding: 40px;
     -webkit-border-radius: 10px;
     /* max-width: 100%; */
-    width: 60vw;
+    width: 30vw;
     animation: slideInFromLeft 2s ease-in;
 
 
@@ -604,6 +604,12 @@
 
 .form-control.error input {
     border-color: #990303;
+}
+.form-control.error textarea {
+    border-color: #990303;
+}
+.form-control.success textarea{
+    border-color: #00712f;
 }
 
 .form-control i {

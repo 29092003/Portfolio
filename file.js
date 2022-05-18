@@ -37,10 +37,11 @@ document.querySelector('.hamburger').addEventListener("click", () => {
 const validate = () => {
 
     const form = document.getElementById('form');
-    const name = document.getElementById('name');
+    const username = document.getElementById('username');
+    const email = document.getElementById('email') 
     const phone = document.getElementById('phone');
     const address = document.getElementById('address');
-    const enquire = document.getElementById('enquire');
+    const enquiry = document.getElementById('enquiry');
 }
 
 form.addEventListener('submit', (event) => {
@@ -50,14 +51,14 @@ form.addEventListener('submit', (event) => {
 
 });
 
-const sendData = (nameVal, sRate, count) => {
+const sendData = (usernameVal, sRate, count) => {
     if (sRate === count) {
         alert('Registration successfull');
-        swal("Welcome!"+ nameVal, "Registration Successfull", "success");
-        location.href = `demo.html?name=${nameVal}`;
-    }
+        // swal("Welcome!"+ usernameVal, "Registration Successfull", "success");
+        // location.href = `demo.html?name=${usernameVal}`;
+    };
 
-}
+};
 
 //for final data validation
 
@@ -69,7 +70,7 @@ const successMsg = (nameVal) => {
         if (formCon[i].className === "form-control success") {
             var sRate = 0 + i;
             console.log(sRate);
-            sendData(nameVal, sRate, count);
+            sendData(usernameVal, sRate, count);
         }
         else {
             return false;
@@ -91,20 +92,22 @@ const isEmail = (emailVal) => {
 
 // Defining the validate function
 
-const nameVal = name.value.trim();
+const usernameVal = username.value.trim();
 const phoneVal = phone.value.trim();
 const addressVal = address.value.trim();
-const enquireVal = enquire.value.trim();
+const enquiryVal = enquiry.value.trim();
+const emailVal = email.value.trim();
+
 
 // validate username
-if (nameVal === "") {
-    setErrorMsg(name, 'username cannot be blank');
-} else if (nameVal.length <= 2) {
-    setErrorMsg(name, 'username min 3 char');
+if (usernameVal === "") {
+    setErrorMsg(username, 'username cannot be blank');
+} else if (usernameVal.length <= 2) {
+    setErrorMsg(username, 'username min 3 char');
 }
 else {
-    setSuccessMsg(name);
-}
+    setSuccessMsg(username);
+};
 
 
 
@@ -118,20 +121,9 @@ else if (!isEmail(emailVal)) {
 }
 else {
     setSuccessMsg(email);
-}
+};
 
-function setErrorMsg(input, errormsgs) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
-    formControl.className = "form-control error"
-    small.innerText = errormsgs;
-}
 
-function setErrorMsg(input) {
-    const formControl = input.parentElement;
-    formControl.className = "form-control success"
-
-}
 
 //validate phone
 
@@ -169,7 +161,19 @@ else {
     setSuccessMsg(enquiry);
 }
 
-successMsg(nameVal);
+successMsg(usernameVal);
 
 //for final loop data validation
 
+function setErrorMsg(input, errormsgs) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+    formControl.className = "form-control error"
+    small.innerText = errormsgs;
+};
+
+function setErrorMsg(input) {
+    const formControl = input.parentElement;
+    formControl.className = "form-control success";
+
+};
